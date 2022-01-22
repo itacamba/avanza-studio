@@ -1,0 +1,73 @@
+.logo-container {
+  width: 200px;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  position: relative;
+  margin-left: 2vw;
+}
+
+.logo-container .logo {
+  position: absolute;
+  width: calc(10px + 10vmin);
+  min-width: 65px;
+}
+
+.logo-container .logo img {
+  width: 100%;
+}
+
+.logo-container .rotating-logo {
+  height: 20vmin;
+  min-height: 100px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo-container .rotating-logo {
+    -webkit-animation: App-logo-spin infinite 50s linear;
+            animation: App-logo-spin infinite 50s linear;
+  }
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo-container {
+    width: 150px;
+    min-height: 100px;
+  }
+}
+/*# sourceMappingURL=Logo.css.map */

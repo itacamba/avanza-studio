@@ -1,0 +1,27 @@
+@import '../Styles/variables';
+
+html {
+    scroll-behavior: smooth;
+    background-color: $pri-color;
+    color: $sec-color;
+}
+
+a {
+    text-decoration: none;
+    color: $sec-color;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+
+
+.container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}

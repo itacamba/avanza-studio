@@ -1,0 +1,147 @@
+@import '../../Styles/index';
+@import '../../Styles/variables';
+
+
+.nav-container {
+    width: 100%;
+    // position: relative;
+    z-index: 1;
+    
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .call-btn {
+        width: 40px;
+        height: 40px;
+        background-color: $acc-color-2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .call-btn i {
+        color: $sec-color;
+        font-size: 20px;
+        margin-top: 5px;
+        transform: scaleX(-1);
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        display: none;
+    }
+
+    .menu-icon i {
+        font-size: 25px;
+    }
+
+    .desktop-nav {
+        padding-right: 5vw;
+    }
+    .desktop-nav a {
+        margin-right: 25px;
+        font-weight: $fw-sb;
+    }
+
+    .desktop-nav a:last-child {
+        margin-right: 0;
+    }
+    
+    .desktop-nav .action-btn {
+        @include mainButton($acc-color-2, $sec-color);
+        margin-top: 0;
+    }
+
+
+    .menu-content{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .x-icon {
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 5vw;
+        padding-right: 5vw;
+    }
+
+    .x-icon i {
+        color: $sec-color;
+        font-size: 30px;
+    }
+
+    .menu-content nav{
+        border-top: 1px solid rgba(0,0,0,.1);
+        margin-top: 2rem;
+    }
+
+    .menu-content a{
+        display: block;
+        color: $sec-color;
+        padding: 1rem 0;
+        padding-right: 5vw;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        text-align: right;
+    }
+
+    .menu-content .action-btn {
+        @include mainButton($acc-color-2, $sec-color);
+        float: right;
+        margin: 1rem 5vw;
+    }
+
+
+}
+
+@media screen and (max-width: 800px){
+
+    .nav-container {
+        padding: 0 5vw;
+
+        .desktop-nav {
+            display: none;
+        }
+
+        .call-btn {
+            display: flex;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+    
+        .menu-content{
+            display: block;
+        }
+
+        .navigation {
+            margin-top: 100px; // so it's positioned below the logo
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .call-btn {
+            background-color: $acc-color-1;
+        }
+    
+        .call-btn i {
+            color: $pri-color;
+        }
+
+    }
+}
